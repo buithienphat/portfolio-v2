@@ -1,6 +1,6 @@
 "use client";
 
-import { links } from "@/contants/NavBar";
+import { links } from "@/constants/NavBar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";

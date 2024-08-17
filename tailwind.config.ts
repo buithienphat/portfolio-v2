@@ -27,16 +27,16 @@ const config = {
       colors: {
         primary: "#1c1c22",
         accent: {
-          DEFAULT: "#00e199",
-          hover: "#00e187",
+          DEFAULT: "#66c2d0",
+          hover: "#66c2d0",
         },
       },
       transitionDuration: {
         main: "500ms",
       },
       boxShadow: {
-        main: "0 0 10px 0 #00e199",
-        second: "0 0 10px 5px #00e199",
+        main: "0 0 10px 0 var(--shadow-color-accent)",
+        second: "0 0 10px 5px var(--shadow-color-accent-hover)",
       },
 
       keyframes: {
@@ -54,7 +54,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       textShadow: {
-        main: "0 0px 15px #00e199",
+        main: "0 0px 15px var(--color-accent)",
       },
     },
   },

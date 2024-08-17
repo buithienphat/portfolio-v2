@@ -4,7 +4,7 @@ import React from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Link from "next/link";
-import { links } from "@/contants/NavBar";
+import { links } from "@/constants/NavBar";
 
 type Props = {};
 
