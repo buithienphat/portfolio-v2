@@ -2,7 +2,10 @@ import { submitForm } from "@/type/type";
 import { axiosInstance } from "@/utils/axiosIntance";
 
 export const homeService = {
-  getCV: () => axiosInstance.get("/cv"),
+  getCV: async () => {
+    const res = await axiosInstance.get("/cv");
+    return res;
+  },
 };
 export const explorerService = {
   getExplorer: () => axiosInstance.get("/explorer"),
