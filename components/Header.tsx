@@ -1,8 +1,7 @@
 import Link from "next/link";
-import React from "react";
+import MoblieNav from "./MoblieNav";
 import Nav from "./Nav";
 import { Button } from "./ui/button";
-import MoblieNav from "./MoblieNav";
 
 type Props = {};
 
@@ -19,8 +18,8 @@ const Header = (props: Props) => {
 
           <div className="hidden lg:flex items-center gap-8">
             <Nav />
-            <Link href={"/"}>
-              <Button className="">Hire me</Button>
+            <Link href={"/contact"}>
+              <Button>Hire me</Button>
             </Link>
           </div>
 

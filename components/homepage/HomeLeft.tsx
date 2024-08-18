@@ -1,31 +1,13 @@
 "use client";
 import Socials from "@/components/Socials";
 import { Button } from "@/components/ui/button";
-import { axiosInstance } from "@/utils/axiosIntance";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { IoMdDownload } from "react-icons/io";
 
-type Props = {};
+type Props = { cv: { data: string; id: string }[] };
 
-const HomeLeft = (props: Props) => {
-  const [data, setData] = useState("");
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const res: any = await axiosInstance.get("/cv");
-
-        if (res.data.length > 0) {
-          setData(res.data[0].data);
-        }
-      } catch (error) {
-        console.log("error", error);
-      }
-    })();
-  }, []);
-
+const HomeLeft = ({ cv }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -52,7 +34,7 @@ const HomeLeft = (props: Props) => {
       </p>
       <div className="flex flex-col xl:flex-row items-center gap-8">
         <Button variant={"outline"} size={"lg"}>
-          <Link target="_blank" href={data}>
+          <Link target="_blank" href={cv[0].data}>
             Download CV <IoMdDownload className="text-2xl inline" />
           </Link>
         </Button>
