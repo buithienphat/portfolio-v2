@@ -60,8 +60,10 @@ const Section = ({ projects }: Props) => {
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent duration-main capitalize">
-                {project.name} project
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent duration-main capitalize cursor-pointer hover:text-accent">
+                <Link href={project.live} target="_blank">
+                  {project.name} project
+                </Link>
               </h2>
               <p className="text-white/80"> {project.desc}</p>
 

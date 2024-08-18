@@ -33,7 +33,7 @@ const projects = [
       { name: "React-hook-from" },
     ],
     name: "shop ecommerce",
-    img: "https://vercel.com/_next/image?url=%2Fapi%2Fscreenshot%3Fdark%3D1%26deploymentId%3Ddpl_HeXZqek383iWz3i7Kc74g3voLAhD%26teamId%3Dbuithienphats-projects%26withStatus%3D1&w=1920&q=75&dpl=dpl_HEU2pGu4cXcREoxzyBrXVvpUMzZR",
+    img: "/assets/work/shop-ecommerce.png",
     live: "https://cfdproject-shop.vercel.app/",
     github: "https://github.com/buithienphat/cfdproject-shop",
   },
@@ -60,7 +60,7 @@ const projects = [
     num: "04",
     category: "frontend",
     title: "project 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, facilis? Vitae officiis ducimus voluptas, cupiditate molestiae repellat perspiciatis veniam sequi itaque corporis et eaque blanditiis officia pariatur sunt amet at?",
+    desc: "Introduces about myseft",
     stack: [
       { name: "HTML" },
       { name: "CSS" },
