@@ -14,59 +14,9 @@ import "swiper/css";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
-const projects = [
-  {
-    num: "01",
-    category: "frontend",
-    title: "project 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, facilis? Vitae officiis ducimus voluptas, cupiditate molestiae repellat perspiciatis veniam sequi itaque corporis et eaque blanditiis officia pariatur sunt amet at?",
-    stack: [
-      { name: "html5" },
-      { name: "css" },
-      { name: "rectjs" },
-      { name: "NextJs" },
-      { name: "typeScript" },
-    ],
-    name: "Javascript",
-    img: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
-  },
-  {
-    num: "02",
-    category: "frontend",
-    title: "project 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, facilis? Vitae officiis ducimus voluptas, cupiditate molestiae repellat perspiciatis veniam sequi itaque corporis et eaque blanditiis officia pariatur sunt amet at?",
-    stack: [
-      { name: "html5" },
-      { name: "css" },
-      { name: "rectjs" },
-      { name: "nextjs14" },
-      { name: "tyscript" },
-    ],
-    name: "Javascript",
-    img: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "project 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, facilis? Vitae officiis ducimus voluptas, cupiditate molestiae repellat perspiciatis veniam sequi itaque corporis et eaque blanditiis officia pariatur sunt amet at?",
-    stack: [
-      { name: "html5" },
-      { name: "css" },
-      { name: "rectjs" },
-      { name: "nextjs14" },
-      { name: "tyscript" },
-    ],
-    name: "Javascript",
-    img: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
-  },
-];
+type Props = {
+  projects: any;
+};
 
 type project = {
   num: string;
@@ -79,7 +29,8 @@ type project = {
   live: string;
   github: string;
 };
-const Work = () => {
+
+const Section = ({ projects }: Props) => {
   const [project, setProject] = useState<project>(projects[0]);
 
   const handleSilceChange = (swiper: any) => {
@@ -110,7 +61,7 @@ const Work = () => {
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent duration-main capitalize">
-                {project.category} project
+                {project.name} project
               </h2>
               <p className="text-white/80"> {project.desc}</p>
 
@@ -137,7 +88,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.live} target="_blank">
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="size-[60px] rounded-full bg-white/5 flex justify-center items-center hover:text-accent">
@@ -159,19 +110,26 @@ const Work = () => {
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSilceChange}
             >
-              {projects.map((project, i) => (
+              {projects.map((project: any, i: any) => (
                 <SwiperSlide key={i} className="w-full">
                   <div className="h-[460px] relative group flex justify-center bg-pink-50/20">
                     <div className="absolute inset-0 bg-black/10 z-10"></div>
                     <div className="size-full">
-                      <Image
+                      <img
                         src={project.img}
+                        alt=""
+                        className="object-cover size-full"
+                      />
+                      {/* <Image
+                        src={
+                          "https://vercel.com/_next/image?url=%2Fapi%2Fscreenshot%3Fdark%3D1%26deploymentId%3Ddpl_HeXZqek383iWz3i7Kc74g3voLAhD%26teamId%3Dbuithienphats-projects%26withStatus%3D1&w=1920&q=75&dpl=dpl_HEU2pGu4cXcREoxzyBrXVvpUMzZR"
+                        }
                         fill
                         alt=""
                         quality={100}
                         priority
                         className="object-cover"
-                      />
+                      /> */}
                     </div>
                   </div>
                 </SwiperSlide>
@@ -190,4 +148,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Section;

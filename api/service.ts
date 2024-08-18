@@ -1,3 +1,5 @@
+"use server";
+
 import { submitForm } from "@/type/type";
 import { axiosInstance } from "@/utils/axiosIntance";
 
@@ -8,7 +10,7 @@ export const homeService = {
   },
 };
 export const explorerService = {
-  getExplorer: () => axiosInstance.get("/explorer"),
+  getExplorer: async () => await axiosInstance.get("/explorer"),
 };
 export const resumeService = {
   getResume: () => axiosInstance.get("/resume"),

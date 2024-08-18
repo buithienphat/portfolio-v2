@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { IoMdDownload } from "react-icons/io";
 
-type Props = { cv: { data: string; id: string }[] };
+type Props = { cv: any };
 
 const HomeLeft = ({ cv }: Props) => {
   return (
@@ -34,7 +34,7 @@ const HomeLeft = ({ cv }: Props) => {
       </p>
       <div className="flex flex-col xl:flex-row items-center gap-8">
         <Button variant={"outline"} size={"lg"}>
-          <Link target="_blank" href={cv[0].data}>
+          <Link target="_blank" href={cv.cv}>
             Download CV <IoMdDownload className="text-2xl inline" />
           </Link>
         </Button>

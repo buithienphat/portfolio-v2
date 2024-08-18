@@ -17,26 +17,28 @@ const MoblieNav = (props: Props) => {
         <SheetTrigger className="flex justify-center items-center">
           <CiMenuFries className="text-4xl text-accent" />
         </SheetTrigger>
-        <SheetContent className="flex flex-col">
-          <div className="mt-32 mb-10 text-center text-2xl">
-            <Link href={"/"}>
-              <h1 className="font-bold">
-                <span className="text-accent">Thien</span>Phat:
-              </h1>
-            </Link>
-          </div>
-          <nav className="flex flex-col gap-5 justify-center items-center capitalize">
-            {links.map(({ name, path }) => (
-              <Link key={name} href={path} className={`relative group`}>
-                {name}
-                <span
-                  className={`block absolute bottom-[-2px] left-0 h-[2px] bg-accent-hover transition-all duration-500 group-hover:w-fit ${
-                    pathname === path ? "w-full" : "w-0"
-                  }`}
-                ></span>
+        <SheetContent className="flex flex-col" aria-describedby={undefined}>
+          <div>
+            <div className="mt-32 mb-10 text-center text-2xl">
+              <Link href={"/"}>
+                <h1 className="font-bold">
+                  <span className="text-accent">Thien</span>Phat:
+                </h1>
               </Link>
-            ))}
-          </nav>
+            </div>
+            <nav className="flex flex-col gap-5 justify-center items-center capitalize">
+              {links.map(({ name, path }) => (
+                <Link key={name} href={path} className={`relative group`}>
+                  {name}
+                  <span
+                    className={`block absolute bottom-[-2px] left-0 h-[2px] bg-accent-hover transition-all duration-500 group-hover:w-fit ${
+                      pathname === path ? "w-full" : "w-0"
+                    }`}
+                  ></span>
+                </Link>
+              ))}
+            </nav>
+          </div>
         </SheetContent>
       </Sheet>
     </div>
