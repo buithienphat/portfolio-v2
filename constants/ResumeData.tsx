@@ -76,7 +76,7 @@ export const education = {
 
 export const skill = {
   title: "My skills",
-  desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus eum, amet temporibus commodi harum non optio earum porro modi cupiditate facere quos ab distinctio officia tempore rerum. Dicta, voluptate laboriosam.",
+  desc: "You have strong skills in frontend development with React.js and Next.js, including API integration and user interface optimization. You are proficient in using Tailwind CSS, Shadcn UI, and Ant Design, and have experience with TypeScript to ensure code safety and efficiency. You are always striving to develop your skills to work effectively and meet the project's requirements.",
   skillList: [
     {
       icon: <FaHtml5 />,

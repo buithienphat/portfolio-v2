@@ -71,7 +71,7 @@ const projects = [
       { name: "React-hook-from" },
     ],
     name: "Portfolio-v1",
-    img: "https://vercel.com/_next/image?url=%2Fapi%2Fscreenshot%3Fdark%3D0%26deploymentId%3Ddpl_6XpBbpiVMSrPeJ9rwmx6kZWz29sp%26teamId%3Dbuithienphats-projects%26withStatus%3D1&w=1920&q=75&dpl=dpl_HEU2pGu4cXcREoxzyBrXVvpUMzZR",
+    img: "https://raw.githubusercontent.com/buithienphat/Portfolio/main/public/assets/img/mywebsite.png",
     live: "https://portfolio-tphat.vercel.app/",
     github: "https://github.com/buithienphat/Portfolio",
   },

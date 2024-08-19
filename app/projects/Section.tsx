@@ -34,7 +34,6 @@ const Section = ({ projects }: Props) => {
   const [project, setProject] = useState<project>(projects[0]);
 
   const handleSilceChange = (swiper: any) => {
-    console.log("swiper.activeIndex", swiper.activeIndex);
     const currentIndex = swiper.activeIndex;
 
     setProject(projects[currentIndex]);
@@ -116,11 +115,11 @@ const Section = ({ projects }: Props) => {
                 <SwiperSlide key={i} className="w-full">
                   <div className="h-[460px] relative group flex justify-center bg-pink-50/20">
                     <div className="absolute inset-0 bg-black/10 z-10"></div>
-                    <div className="size-full">
+                    <div className="size-full bg-black">
                       <img
                         src={project.img}
                         alt=""
-                        className="object-cover size-full"
+                        className="object-contain size-full"
                       />
                       {/* <Image
                         src={

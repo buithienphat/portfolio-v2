@@ -27,7 +27,7 @@ function SectionResume({ data }: Props) {
         opacity: 1,
         transition: { duration: 0.4, delay: 1, ease: "easeInOut" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 select-text"
     >
       <div className="container">
         <Tabs
