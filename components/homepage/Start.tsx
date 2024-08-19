@@ -32,27 +32,29 @@ const stats = [
 const Start = (props: Props) => {
   return (
     <section className="pb-40">
-      <div className="container">
+      <div className="container flex justify-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
           }}
-          className="flex flex-wrap gap-6 xl:max-w-none justify-between items-center"
+          className="flex flex-wrap gap-6 xl:max-w-none justify-between sm:items-center flex-col max-w-[80vw] sm:flex-row sm:w-full items-start"
         >
           {stats.map((stat) => (
-            <div
-              className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
-              key={stat.text}
-            >
-              <CountUp
-                end={stat.num}
-                duration={3}
-                delay={1}
-                className="text-4xl xl:text-6xl font-semibold"
-              />
-              <p className="text-white/80 leading-snug">{stat.text}</p>
+            <div>
+              <div
+                className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
+                key={stat.text}
+              >
+                <CountUp
+                  end={stat.num}
+                  duration={3}
+                  delay={1}
+                  className="text-4xl xl:text-6xl font-semibold"
+                />
+                <p className="text-white/80 leading-snug">{stat.text}</p>
+              </div>
             </div>
           ))}
         </motion.div>
