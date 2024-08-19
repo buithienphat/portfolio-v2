@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   description: "Product create by Thiên Phát",
   openGraph: {
     type: "website",
-    url: "https://thienphat-buithienphats-projects.vercel.app",
+    url: "https://thienphat-buithienphats-projects.vercel.app/",
     title: "Portfolio Thiên Phát",
     description: "Product create by Thiên Phát",
     siteName: "Portfolio Thiên Phát",
     images: [
       {
-        url: "/asset/home/home.png",
+        url: "https://raw.githubusercontent.com/buithienphat/portfolio-v2/main/public/assets/home/home.png?token=GHSAT0AAAAAACTFQWYDYTUA4NCCU7VL3TXAZWC3WHA",
       },
     ],
   },
