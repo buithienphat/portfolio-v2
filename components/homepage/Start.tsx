@@ -42,11 +42,8 @@ const Start = (props: Props) => {
           className="flex flex-wrap gap-6 xl:max-w-none justify-between sm:items-center flex-col max-w-[80vw] sm:flex-row sm:w-full items-start"
         >
           {stats.map((stat) => (
-            <div>
-              <div
-                className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
-                key={stat.text}
-              >
+            <div key={stat.text}>
+              <div className="flex-1 flex gap-4 items-center justify-center xl:justify-start">
                 <CountUp
                   end={stat.num}
                   duration={3}
