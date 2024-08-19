@@ -31,7 +31,7 @@ const stats = [
 
 const Start = (props: Props) => {
   return (
-    <section className="">
+    <section className="pb-40">
       <div className="container">
         <motion.div
           initial={{ opacity: 0 }}
