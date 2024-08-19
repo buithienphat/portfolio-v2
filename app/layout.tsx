@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Portfolio Thiên Phát",
     images: [
       {
-        url: "https://raw.githubusercontent.com/buithienphat/portfolio-v2/main/public/assets/home/home.png?token=GHSAT0AAAAAACTFQWYDYTUA4NCCU7VL3TXAZWC3WHA",
+        url: "https://raw.githubusercontent.com/buithienphat/portfolio-v2/main/public/assets/home/home.png",
       },
     ],
   },
