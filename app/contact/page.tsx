@@ -55,7 +55,7 @@ const Contact = (props: Props) => {
       });
       reset();
     } catch (error: any) {
-      console.log(error.text);
+      console.log(error);
       toast({
         title:
           "Thank you for contacting me! I will respond as soon as possible.",
