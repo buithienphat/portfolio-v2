@@ -38,7 +38,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head></head>
       <Head>
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -47,6 +46,21 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-WLBM66TP');`}
         </Script>
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-V8TRDYWYVM"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-V8TRDYWYVM');
+            `,
+          }}
+        />
       </Head>
       <body className={jetbrainsMono.variable}>
         <noscript>
